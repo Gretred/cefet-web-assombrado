@@ -60,6 +60,18 @@ a:active {
 
 #menu-de-navegacao ul {
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  
+}
+ul li {
+  flex: 1;
+  margin-right: 4;
+  text-align: center;
+  
+
 }
 
 
@@ -77,6 +89,7 @@ a:active {
 /* --- Principal >> Postagens principais --- */
 #posts-principais {
   padding-top: 1.5em;
+
 }
 
 #posts-principais h1 {
@@ -89,10 +102,22 @@ a:active {
   margin-left: 2.5%;
   margin-right: 2.5%;
   display: inline-block;
+  position: relative;
+  
+  
 }
 
 #posts-principais .post .titulo {
   text-shadow: 1px 1px black;
+  position: absolute;
+  top: 20px;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#posts-principais .post .titulo:hover{
+  top: 6px;
+  opacity: 1;
 }
 
 #posts-principais .post img {
@@ -101,6 +126,7 @@ a:active {
   box-sizing: border-box;
   border: 6px solid white;
   margin-bottom: .5em;
+  
 }
 
 
@@ -133,6 +159,41 @@ a:active {
   display: inline-block;
 }
 
+#novidade::before{
+  content: "Novidade!";
+    display: inline-block;
+    margin-right: 1em;
+    color: white;
+    background-color: orange;
+    padding: 0.25em;
+    border-radius: 0.25em;
+
+}
+
+.boo{
+  width: 40px;
+  transform: scaleX(-1);
+  position: absolute;
+  opacity: 0.1;
+  
+}
+
+.boo:hover{
+  opacity: 1;
+}
+
+#boo2{
+  left: 40px;
+}
+
+#boo3{
+  left: 100px;
+}
+
+#boo1{
+left: 160px;
+}
+
 
 
 
@@ -141,12 +202,14 @@ a:active {
   float: right;
   width: 300px;
   padding: 15px;
+  box-sizing: border-box;
   background-color: black;
   background-image: url(imgs/mula.webp);
   background-repeat: no-repeat;
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  position: sticky;
 }
 
 #tags h1 {
@@ -164,7 +227,18 @@ a:active {
   background-color: orange;
   color: white;
   text-shadow: 1px 1px black;
+  
 }
+
+
+.tag-1:active,.tag-2:active,.tag-3:active{
+  position: relative;
+  top: -2px;
+  left: -2px;
+  cursor: pointer;
+
+}
+
 
 .tag-2 {
   font-size: 125%;
@@ -188,8 +262,6 @@ a:active {
 #rodape .logo-rodape {
   margin-right: 2em;
 }
-
-
 
 
 
